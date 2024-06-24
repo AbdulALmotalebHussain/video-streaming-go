@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Video Streaming Service</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="video-upload" class="custom-file-upload">
+                Browse...
+            </label>
+            <input id="video-upload" type="file" name="video" accept="video/*">
+            <input type="submit" value="Upload" class="upload-button">
+        </form>
+        <div id="video-container">
+            {{if .VideoURL}}
+            <video id="videoPlayer" controls>
+                <source src="{{.VideoURL}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            {{else}}
+            <p>No video with supported format and MIME type found.</p>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
+

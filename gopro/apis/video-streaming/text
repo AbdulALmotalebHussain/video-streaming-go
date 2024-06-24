@@ -1,0 +1,18 @@
+I Wanna build a project to stream videos like netflix and youtube.
+
+I wanna u help me. To how can i build it from scratch.
+
+I Have designed a project. I will use this Tools to build it.
+
+1- goloang for web development.
+
+2-mongodb for data storage.
+
+3-free cloud for save file of videos.
+
+4-redis cache for save 10 seconds of videos.
+
+5-htmx and go template for build the project.
+
+
+
